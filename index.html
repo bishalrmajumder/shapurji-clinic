@@ -91,6 +91,7 @@ h2{font-size:clamp(1.7rem,3.5vw,2.4rem);margin-bottom:10px}
 :root[data-theme="dark"] .step .n,:root[data-theme="dark"] .save{color:#2a120d}
 :root[data-theme="dark"] .btn-primary,:root[data-theme="dark"] .mbar a.main,:root[data-theme="dark"] .emergency .btn{color:#2a120d}
 :root[data-theme="dark"] .btn-wa{color:#052e16}
+:root[data-theme="dark"] .btn-teal{color:#06201d}
 :root[data-theme="dark"] .avatar{color:#06201d;background:linear-gradient(135deg,#5fd3ca,#a6e8e2)}
 :root[data-theme="dark"] .today{background:#22c55e;color:#052e16}
 :root[data-theme="dark"] .g,:root[data-theme="dark"] input,:root[data-theme="dark"] textarea,:root[data-theme="dark"] form select{color-scheme:dark}
@@ -125,7 +126,9 @@ header{position:sticky;top:0;z-index:50;background:color-mix(in srgb,var(--bg) 8
 .hero h1 span{color:var(--brand)}
 .hero h1 em{font-style:normal;color:var(--coral-txt)}
 .hero p{color:var(--muted);font-size:1.08rem;max-width:540px;margin-bottom:26px}
-.hero-ctas{display:flex;flex-wrap:wrap;gap:10px;margin-bottom:28px}
+.hero-ctas{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:10px;margin-bottom:28px;max-width:560px}
+.hero-ctas .btn{width:100%;min-height:54px;padding:12px 10px;font-size:clamp(.82rem,3.6vw,.95rem);text-align:center;line-height:1.2}
+@media(max-width:340px){.hero-ctas .btn{padding:10px 8px;gap:6px}.hero-ctas .btn svg{width:16px;height:16px}}
 .status{display:inline-flex;align-items:center;gap:8px;font-weight:600;font-size:.9rem;padding:8px 14px;border-radius:99px;background:var(--bg-2);border:1px solid var(--line);margin-bottom:18px}
 .dot{width:9px;height:9px;border-radius:50%;background:var(--muted)}
 .dot.open{background:var(--ok);box-shadow:0 0 0 4px rgba(22,163,74,.18);animation:pulse 2s infinite}
@@ -380,6 +383,7 @@ footer ul a:hover{color:var(--brand)}
       <p data-bind="intro">Experienced doctors across 12 specialities, an in-house pathology lab and easy WhatsApp booking — all under one roof near Shapoorji Sukhobrishti, New Town.</p>
       <div class="hero-ctas">
         <a class="btn btn-primary" href="#book"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="4" width="18" height="18" rx="2"/><path d="M16 2v4M8 2v4M3 10h18"/></svg>Book Appointment</a>
+        <a class="btn btn-teal" href="#doctors" title="See all doctors at Shapurji Clinic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.9M16 3.1a4 4 0 0 1 0 7.8"/></svg>Doctor's List</a>
         <a class="btn btn-wa" data-href="wa" href="https://wa.me/917980367584?text=Hello%2C%20I%27d%20like%20to%20book%20an%20appointment." title="WhatsApp Shapurji Clinic to book a doctor or blood test"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M17.5 14.4c-.3-.1-1.8-.9-2-1-.3-.1-.5-.1-.7.1-.2.3-.8 1-.9 1.2-.2.2-.3.2-.6.1-.3-.1-1.3-.5-2.4-1.5-.9-.8-1.5-1.8-1.7-2.1-.2-.3 0-.5.1-.6l.4-.5c.1-.2.2-.3.3-.5.1-.2 0-.4 0-.5l-.9-2.2c-.2-.6-.5-.5-.7-.5h-.6c-.2 0-.5.1-.8.4-.3.3-1 1-1 2.5s1.1 2.9 1.2 3.1c.1.2 2.1 3.2 5.1 4.5.7.3 1.3.5 1.7.6.7.2 1.4.2 1.9.1.6-.1 1.8-.7 2-1.4.2-.7.2-1.3.2-1.4-.1-.1-.3-.2-.6-.3zM12 21.8c-1.8 0-3.5-.5-5-1.4l-.4-.2-3.7 1 1-3.6-.2-.4A9.8 9.8 0 1 1 12 21.8zm8.4-18.2A11.8 11.8 0 0 0 1.7 17.8L0 24l6.3-1.7A11.8 11.8 0 0 0 24 12a11.7 11.7 0 0 0-3.6-8.4z"/></svg>WhatsApp Us</a>
         <a class="btn btn-ghost" data-href="map" href="https://www.google.com/maps/search/?api=1&query=DLF%20Heights%20Plaza%2C%20New%20Town%2C%20Kolkata%20700135" title="Directions to Shapurji Clinic, DLF Heights Plaza, New Town" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13S3 17 3 10a9 9 0 1 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>Directions</a>
       </div>
